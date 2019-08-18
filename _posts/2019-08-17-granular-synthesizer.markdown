@@ -3,34 +3,59 @@ layout: post
 title: Granular Synthesiser
 date: 2019-08-17 9:21:20 +0200
 img: granular_synth.png # Add image post (optional)
-description: "It's been awhile that I wanted to start writing about experiences and things I want to share."
+description: "Granular synthesis how mine works"
 tags: [audio, synthesis, granular, grain, audio source]
 ---
-It's been awhile that I wanted to start writing about experiences and things I want to share. As a secondary goal I also hope it will also force myself to structure those experiences into words in order to get the best out of them. I will share about my previous work experience, maybe geeky sometimes (you might see some code here), also about working as a team. Before moving forward, let's start by introducing myself.
+## How it works
 
-I am an enthusiastic Belgian who loves to build and create things. I truly believe that being empathic and direct to your peers is a gift and that we should not be too focus to do things only for a bigger purpose -- *Fun has to be part of work*.
+When I worked for [Laras](http://laras.be), I had the opportunity for my sonification project to model and code my own granular synthesiser.
 
-I studied engineering at I.S.I.B. in Brussels and my first work experience was as a researcher in the field of sonification of the network at [Laras](http://laras.be). The main goal was to create sound from network packets in order to have a direct audio picture of what's happening on the network infrastructure (more to come soon).
+> Granular synthesis is a basic sound synthesis method that operates on the microsound time scale.
+> It is based on the same principle as sampling. However, the samples are not played back conventionally, but are instead split into small pieces of around 1 to 50 ms. These small pieces are called grains. Multiple grains may be layered on top of each other, and may play at different speeds, phases, volume, and frequency, among other parameters.
 
-<!-- <p align="center">
-<a href="http://laras.be">
-<img src="/assets/img/sonification_lab.png" alt="Sonification lab"/>
-</a>
-</p> -->
+*[Source wikipedia](https://en.wikipedia.org/wiki/Granular_synthesis)*
 
-After that I went to [Odoo](https://odoo.com) as a client solution developer where I was responsible to develop and ship customisations for the customers. I learnt the practices to develop what was needed and only focus on what really matters for the client -- The excellence of services lies in our capacity to deliver quality fast and I truly believe that business analysis and client management are key to achieve that.
-
-<!-- <p align="center">
-<a href="https://odoo.com">
-<img src="/assets/img/odoo_logo.png" alt="Odoo"/>
-</a>
-</p> -->
-
-Two years ago I got the opportunity to start at [Skipr](https://skipr.co) as developer in order to build an app that would enable everyone to move everywhere. That is the first time that I am part of building a product from scratch with all the validation of intermediate steps. We went from 1 to 20 people in two years and are live in Belgium. I grew and hope to still grow a lot in that company and my job become now to support our development team to achieve our goals in any matter -- it can be related to processes (improve the way we work), tech and people management.
+## Creation of grains
+We first have to load a wave form in order to pick some samples to create our grains. Those grain are randomly selected within a window (subset) of the whole waveform as you can see on the figure 1. Having a window can be convenient if you want to select only certain parts of the waveform and move this window to modify the generated grains.
 
 <p align="center">
-<a href="https://go.onelink.me/INwt/d8a5544">
-<img src="/assets/img/download_app_ios.png" alt="Odoo"/>
-<img src="/assets/img/download_app_android.png" alt="Odoo"/>
-</a>
+<img src="/assets/img/sample_selection.png" alt="Grain selection"/>
 </p>
+<p align="center">
+Figure 1: Sample selection
+</p>
+
+A grain is composed of Selected sample and some silence at the end of the grain to temporise the succession of grains. Reducing the blank will accelerate the succession of grains and accelerate the production of grains.
+
+Grain = Selected sample + Blank
+
+
+```cpp
+class Grain{
+public:
+    Grain(
+      float* audioFile,
+      int duration,
+      int blank,
+      int initPos,
+      int channels,
+      int musicSize
+    );
+    samples getSample();
+
+    int mEnvelope;
+    int mDuration;
+    int mCurrentPostion;
+    int mInitPostion;
+
+    float* mAudioFile;
+    bool isDone(){
+        return done;
+    }
+    bool done;
+    int mBlank;
+    int mWindowSize;
+    int mChannels;
+    int mMusicSize;
+};
+```
