@@ -6,9 +6,9 @@ img: granular_synth.png # Add image post (optional)
 description: "Granular synthesis how mine works"
 tags: [audio, synthesis, granular, grain, audio source]
 ---
-## How it works
 
 When I worked for [Laras](http://laras.be), I had the opportunity for my sonification project to model and code my own granular synthesiser.
+## How it works
 
 > Granular synthesis is a basic sound synthesis method that operates on the microsound time scale.
 > It is based on the same principle as sampling. However, the samples are not played back conventionally, but are instead split into small pieces of around 1 to 50 ms. These small pieces are called grains. Multiple grains may be layered on top of each other, and may play at different speeds, phases, volume, and frequency, among other parameters.
