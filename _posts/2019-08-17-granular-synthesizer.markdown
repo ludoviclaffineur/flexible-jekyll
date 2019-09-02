@@ -27,8 +27,9 @@ Figure 1: Sample selection
 
 A grain is composed of Selected sample and some silence at the end of the grain to temporise the succession of grains. Reducing the blank will accelerate the succession of grains and accelerate the production of grains.
 
-Grain = Selected sample + Blank
+**Grain = (Selected samples + Blank) x Envelope**
 
+In order to select a grain we pass the pointer of the waveform `float* audioFile` with a duration `int mDuration` and a position `int mInitPosition`. The initial position is randomly set in the window and has to make sure the grain can be read (i.e.: that the grain is included in the waveform)
 
 ```cpp
 class Grain{
@@ -59,3 +60,90 @@ public:
     int mMusicSize;
 };
 ```
+
+
+## Playing the grains
+
+Everytime that a sample is needed from a grain  `Grain::getSample()` is called. This returns the current value of the sample and moves to the next sample.
+
+
+```cpp
+samples Grain::getSample(){
+    samples current_sample;
+    float sample = 0.0f;
+    if (mCurrentPostion <mDuration) {
+        float hanningCoeff = 0.5 - 0.5* cosf(2*M_PI *(float)mCurrentPostion/(float)(mDuration));
+        if(mChannels == 1){
+            current_sample.right = mAudioFile[mInitPostion+mCurrentPostion]*hanningCoeff;
+            current_sample.left  = mAudioFile[mInitPostion+mCurrentPostion]*hanningCoeff;
+        }
+        else if(mChannels == 2){
+            current_sample.left = mAudioFile[mInitPostion+mCurrentPostion*mChannels    ]*hanningCoeff;
+            current_sample.right  = mAudioFile[mInitPostion+mCurrentPostion*mChannels + 1]*hanningCoeff;
+        }
+
+    }
+    else if(mCurrentPostion< mDuration+ mBlank){
+        current_sample.left = 0.0f;
+        current_sample.right = 0.0f;
+    }
+    else{
+        done = true;
+    }
+    mCurrentPostion++;
+    return current_sample;
+```
+<p align="center">
+<img src="/assets/img/grain_play.png" alt="Grains player"/>
+</p>
+<p align="center">
+Figure 2: Grains player
+</p>
+
+```cpp
+samples ofxGranularSynth::getSample(){
+    samples sampleResult;
+
+    // this condition is there to add a new grain in the vector.
+    if(mGrains.size()==0 || mPosition++ > (mGrains[mGrains.size()-1]->mDuration
+      + mGrains[mGrains.size()-1]->mBlank - mOverlap)){
+        if(mDuration >mOverlap){
+          mGrains.push_back(
+            new Grain(
+              music,
+              mDuration,
+              mBlank,
+              mInitPos,
+              mChannel,
+              musicSize
+            )
+          );
+        }
+        mPosition = 0.0f;
+    }
+    // check that the grain is not empty otherwise it means that the result should be 0
+    if (mGrains.size()!=0) {
+        if (mGrains[0]->isDone()){
+            delete *mGrains.begin();
+            mGrains.erase(mGrains.begin());
+        }
+        for(int i =0; i<mGrains.size();i++) {
+            samples retour = mGrains[i]->getSample();
+            sampleResult.right += retour.right;
+            sampleResult.left += retour.left;
+        }
+    }
+    else{
+        sampleResult.right = sampleResult.left = 0.0f;
+    }
+    return sampleResult;
+}
+
+```
+
+## Result
+
+<iframe src="https://player.vimeo.com/video/130955655" width="640" height="479" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/130955655">ofxGranularSynth</a> from <a href="https://vimeo.com/user41154273">Ludovic Laffineur</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+### Code Source
+[Github -- ofxAudioGen](https://github.com/ludoviclaffineur/ofxAudioGen)
