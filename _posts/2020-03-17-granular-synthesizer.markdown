@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Granular Synthesiser
-date: 2019-08-17 9:21:20 +0200
+date: 2020-03-17 9:21:20 +0200
 img: granular_synth.png # Add image post (optional)
 description: "Granular synthesis how mine works"
 tags: [audio, synthesis, granular, grain, audio source]
@@ -16,7 +16,7 @@ When I worked for [Laras](http://laras.be), I had the opportunity for my sonific
 *[Source wikipedia](https://en.wikipedia.org/wiki/Granular_synthesis)*
 
 ## Creation of grains
-We first have to load a wave form in order to pick some samples to create our grains. Those grain are randomly selected within a window (subset) of the whole waveform as you can see on the figure 1. Having a window can be convenient if you want to select only certain parts of the waveform and move this window to modify the generated grains.
+We first have to load a wave form in order to pick some samples to create our grains. Those grains are randomly selected within a window (subset) of the whole waveform as you can see on the figure 1. Having a window can be convenient if you want to select only certain parts of the waveform and move this window to modify the generated grains.
 
 <p align="center">
 <img src="/assets/img/sample_selection.png" alt="Grain selection"/>
@@ -25,9 +25,9 @@ We first have to load a wave form in order to pick some samples to create our gr
 Figure 1: Sample selection
 </p>
 
-A grain is composed of Selected sample and some silence at the end of the grain to temporise the succession of grains. Reducing the blank will accelerate the succession of grains and accelerate the production of grains.
+A grain is composed of selected samples (within an envelope) and some blank at the end. Reducing the blank will accelerate the succession and the production of grains.
 
-**Grain = (Selected samples + Blank) x Envelope**
+**Grain = (Selected samples x Envelope) + Blank**
 
 In order to select a grain we pass the pointer of the waveform `float* audioFile` with a duration `int mDuration` and a position `int mInitPosition`. The initial position is randomly set in the window and has to make sure the grain can be read (i.e.: that the grain is included in the waveform)
 
@@ -60,9 +60,17 @@ public:
     int mMusicSize;
 };
 ```
-
-
 ## Playing the grains
+
+
+If you play the selected sample without envelope you will face jumps in your resulting waveform and you will hear clicks. An envelope that does not affect too much the harmonics of the signal is chosen and will smoothen the beginning and the end of the samples.
+
+>Most references to the Hanning window come from the signal processing literature, where it is used as one of many windowing functions for smoothing values. It is also known as an apodization (which means “removing the foot”, i.e. smoothing discontinuities at the beginning and end of the sampled signal) or tapering function."
+*[Source scipy doc](https://docs.scipy.org/doc/numpy/reference/generated/numpy.hanning.html)*
+
+```cpp
+float hanningCoeff = 0.5 - 0.5* cosf(2*M_PI *(float)mCurrentPostion/(float)(mDuration));
+```
 
 Everytime that a sample is needed from a grain  `Grain::getSample()` is called. This returns the current value of the sample and moves to the next sample.
 
@@ -147,3 +155,9 @@ samples ofxGranularSynth::getSample(){
 <p><a href="https://vimeo.com/130955655">ofxGranularSynth</a> from <a href="https://vimeo.com/user41154273">Ludovic Laffineur</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 ### Code Source
 [Github -- ofxAudioGen](https://github.com/ludoviclaffineur/ofxAudioGen)
+
+If you want to run this example you only have to build [this example](https://github.com/ludoviclaffineur/ofxAudioGen/tree/master/GranularSynth)
+
+## Improvements
+
+To improve this part of the project, we should add support for different audio input file. For the moment it's only .wav.
