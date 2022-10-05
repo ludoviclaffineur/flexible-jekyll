@@ -8,30 +8,11 @@ tags: [skipr, odoo, work, writing, laras, introduction]
 ---
 I am an enthusiastic Belgian who loves to build and create things. I truly believe that being empathic and direct to your peers is a gift and that we should not be too focus to do things only for a bigger purpose -- *Fun has to be part of work*.
 
-I studied engineering at I.S.I.B. in Brussels in 2013 and my first work experience was a 2 year R&D project in the field of network sonification [Laras](http://laras.be). The main goal was to create sound from network packets in order to have a direct audio picture of what's happening on the network infrastructure (more to come soon).
-
-<!-- <p align="center">
-<a href="http://laras.be">
-<img src="/assets/img/sonification_lab.png" alt="Sonification lab"/>
-</a>
-</p> -->
+I studied software engineering at I.S.I.B. in Brussels in 2013 and my first work experience was a 2 year R&D project in the field of network sonification [Laras](http://laras.be). The main goal was to create sounds from network packets in order to have a direct audio picture of what's happening on the network infrastructure (more to come soon).
 
 In September 2015 I started work for [Odoo](https://odoo.com) as a client solution developer where I was responsible to develop and ship customisations for the customers. I learnt the practices to develop what was needed and only focus on what really matters for the client -- The excellence of services lies in our capacity to deliver quality fast and I truly believe that business analysis and client management are key to achieve that.
 
-<!-- <p align="center">
-<a href="https://odoo.com">
-<img src="/assets/img/odoo_logo.png" alt="Odoo"/>
-</a>
-</p> -->
+In September 2017 I got the opportunity to join at [Skipr](https://skipr.co) as developer in order to build an app that would enable everyone to move everywhere. We built a product from scratch with all the validation of intermediate steps. We went from 1 to 40 people in two years and are live in Belgium and ready to spread in Europe. My job was to support our development team to achieve our goals in any matter -- processes, code quality, architecture and people management.
 
-In September 2017 I got the opportunity to join at [Skipr](https://skipr.co) as developer in order to build an app that would enable everyone to move everywhere. That is the first time that I am part of building a product from scratch with all the validation of intermediate steps. We went from 1 to 20 people in two years and are live in Belgium and ready to spread in Europe. I grew and hope to still hope to grow a lot in that company -- My job become now to support our development team to achieve our goals in any matter -- it is related to processes, code quality, architecture and people management.
-<p align="center">
-<a href="https://go.onelink.me/INwt/d8a5544">
-<img src="/assets/img/download_app_ios.png" alt="Skipr"/>
-<img src="/assets/img/download_app_android.png" alt="Skipr"/>
-</a>
-</p>
-
-
-It's been awhile that I wanted to start writing about experiences and things I want to share. I also hope to structure those experiences into words in order to get the best out of them. I will share about my previous work experience, maybe geeky sometimes (you might see some code here), also about my passion (music composition) and working as a team.
+It's been awhile that I wanted to start writing about experiences and learnings to share with a broader community so I hope you will find some interesting readings and don't hesitate to contact me
 
