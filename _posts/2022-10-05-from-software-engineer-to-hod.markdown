@@ -7,13 +7,13 @@ description: "Struggles to move from software engineer world to head of developm
 tags: [skipr, career]
 ---
 
-When I started my journey as software engineer in my last company, I had no idea that I would end up in a team leading/engineer manager role. This happens frequently with fast growing companies where founding engineers evolve to a leader role quickly without being really prepared (that's where the fun is right?). It's challenging to be promoted from a building role with a well defined scope to a broader one where the scope, feasibility and timing are keys and are most of the time fuzzy.
+When I started my journey as software engineer in my last company, I had no idea that I would end up in a team leading/engineer manager role. This happens frequently with fast growing companies where founding engineers evolve to a leader role quickly without being really prepared (that's where the fun is right?). It's challenging to be promoted from a building role (where you are in charge to discuss and deliver a scope) to a role where you need to commit a team on a deadline where the scope, feasibility and timing are keys and are most of the time fuzzy and not _totally_ in your control
 
 ## Founding software engineer
 
 When joining an early stage company, everyone is taking responsability where they are not specialised to run the business and it goes the same way for the software engineer role that requires much more than coding skills. Your main asset at that time is probably communication because this is the time where everything _looks_ possible and beeing able to communicate internally and externally about what you are able to do will definitly help the company to commit about deadlines.
 
-To make it more tangeable this is a list of tasks I did at least once the first 2 years in the company: 
+To make it more tangeable this is a list of tasks I did on a regular basis the first 2 years in the company: 
 
 - Tech
     - Architecture decision
@@ -32,3 +32,4 @@ To make it more tangeable this is a list of tasks I did at least once the first 
     - Users' feedback management
 
 Concreatly some mornings you will have to isolate yourself to ship that feature for the end of the sprint and the next day, you gonna have a to explain and sell the solution to external parties in order to get access to their API. 
+
