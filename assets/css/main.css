@@ -142,6 +142,7 @@ dfn {
  */
 mark {
   background-color: #c0fbd7;
+  font-weight: 600;
   color: #000; }
 
 /**
@@ -697,7 +698,6 @@ blockquote {
   padding-bottom: 0.3rem;
   margin-left: 1rem;
   background-color: #F0FDF5;
-  font-size: large;
   border-radius: 5px; }
 
 pre {
@@ -791,7 +791,7 @@ table tfoot td {
   left: 10px;
   bottom: 20px;
   width: 240px;
-  height: 90%;
+  height: 95.5%;
   padding: 20px 10px;
   background-color: #ffffff;
   border: 1.5px solid #000000;
