@@ -7,10 +7,10 @@ description: "Struggles to move from software engineer world to head of developm
 tags: [skipr, career]
 ---
 
-When I started my journey as a software engineer in my last company, I had no idea that I would end up in a team leading/engineer manager role. This happens frequently with fast-growing companies, where founding engineers evolve to a leader role quickly without being really prepared (that's where the fun is, right?). It's challenging to be promoted from a building role (where you are in charge to discuss and deliver a scope) to a role where you need to commit a team on a deadline where the scope, feasibility and timing are keys and are most of the time fuzzy and not _totally_ under your control.
+When I started my journey as a software engineer in my last company, I had no idea that I would end up in a team leading/engineer manager role. This happens frequently with fast-growing companies, where founding engineers evolve to a leader role quickly without being really prepared (that's where the fun is, right?). It's challenging to be promoted from a building role (where you are in charge to discuss and deliver a scope) to a role where your team needs to commit on a deadline where the scope, feasibility and timing are keys and are most of the time fuzzy and not _totally_ under your control.
 
 <div class="banner">
-This post relates to my experience and what I faced during those 5 years. This is probably not what other founding engineers might have faced in other companies.
+This post relates to my experience and what I faced during the past 5 years. This is probably not what other founding engineers might have faced in other companies. I do not 
 </div>
 
 ## Founding software engineer
@@ -54,8 +54,8 @@ The company is getting more funds to accelerate the development so, good news, t
 
 That's the moment you have to decide what is your focus as the CTO plays the cross team alignment role and vision, your role becomes more and more precise and that's the moment you start to tackle the big part of the technical debt. You focus on an area and delegate part of the codebase to other technical lead, so they can move their own pace. You rebuild part of the software but still, the team needs to accelerate shipping.
 
-
 <mark>Your role start to shift from solving problems to creating stability, process, common understanding and standards.</mark> You are not in a very small team and having team members with different experiences can lead to frustrations and inconsistencies in the way of delivering features as a whole. The team needs to set standard ways of working so that they don't argue on an architecture decision on every pull request and new players/teammates know what are the rules of the game.
 
-At this stage you start to understand that your biggest strength for the team is probably not coding itself as you hired experienced software engineers for the technology you used but the knowledge you have on the business, software and past implementations. You start to ask yourself more and more: _What did we forget to think about this feature at this stage and might fire back in a later stage of development?_
+At this stage you start to understand that your biggest strength for the team is probably not coding itself as you hired experienced software engineers for the technology you used but the knowledge you have on the business, software and past implementations. You start to ask yourself more and more: <mark>What did we forget to think about this feature at this stage and might fire back in a later stage of development?</mark>
 
+On a regular basis, you find gap in the way a feature is being implementated and you start to communicate proactively to the team and product managers what we might forget and ask them how we should deal with this new information. Side story: the team starts to know that if you arrive in a call, it's probably to bring _bad_ news or that something pops out that we did not think about earlier. It means most of the time, delays for the product team as more work has to be done by the development team or scope reduction. 
