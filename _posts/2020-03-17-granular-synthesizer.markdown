@@ -3,7 +3,7 @@ layout: post
 title: Granular Synthesiser
 date: 2020-03-17 9:21:20 +0200
 img: granular_synth.png # Add image post (optional)
-description: "Granular synthesis how mine works"
+description: "Deep explaination of granular synthesiser developper with OpenFrameworks."
 tags: [audio, synthesis, granular, grain, audio source]
 ---
 
