@@ -700,6 +700,14 @@ blockquote {
   background-color: #F0FDF5;
   border-radius: 5px; }
 
+.banner-contact {
+  padding-left: 1.1rem;
+  padding-right: 0.3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: #F0FDF5;
+  border-radius: 5px; }
+
 pre {
   padding: 1rem 2rem;
   overflow: auto;
@@ -1027,6 +1035,57 @@ a.newer-posts:hover {
     border: 1px solid #263959; }
     .page-footer .page-tag a:hover {
       text-decoration: underline; }
+
+.contact-post {
+  background-color: #F0FDF5;
+  text-align: center; }
+  .contact-post .contact-title {
+    position: relative;
+    color: #333030;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+    text-align: center; }
+    .contact-post .contact-title::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: calc(50% - 200px);
+      transform: translateY(-50%);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: #515151; }
+    .contact-post .contact-title::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: calc(50% - 200px);
+      transform: translateY(-50%);
+      position: absolute;
+      top: 50%;
+      right: 0;
+      background-color: #515151; }
+  .contact-post ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center; }
+    .contact-post ul li {
+      display: inline-block;
+      margin-left: 10px; }
+      .contact-post ul li:first-child {
+        margin-left: 0; }
+      .contact-post ul li a {
+        color: #515151;
+        display: block;
+        padding: 5px;
+        font-size: 18px;
+        transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82); }
+        .contact-post ul li a:hover {
+          color: #333030;
+          transform: scale(1.2); }
 
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
 .blog-tags {

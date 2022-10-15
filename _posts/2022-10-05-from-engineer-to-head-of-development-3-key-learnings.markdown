@@ -80,3 +80,4 @@ Make it work, make it right and then make it fast.
 ### Having a high performing team requires time
 
 This is one of the most complex learning to apply. Having a high performing team require time. You can't really control how quick the company evolves but hiring good team members is a given and they need time to work well and fast together. Team members need to be happy and thrilled by the challenge. This requires soft skills skill such as patience, empathy and people management. On the otherwise, the team must have a clear vision and objectives so everybody feels the boat is going in the right direction. 
+
