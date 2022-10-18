@@ -1,10 +1,11 @@
 ---
-layout: post
-title: Granular Synthesiser
-date: 2020-03-17 9:21:20 +0200
-img: granular_synth.png # Add image post (optional)
-description: "Granular synthesis how mine works"
-tags: [audio, synthesis, granular, grain, audio source]
+title: "Granular Synthesiser"
+header:
+  overlay_image: /assets/images/granular_synth.png
+  og_image: /assets/images/granular_synth.png
+tagline: "Deep explaination of granular synthesiser developper with OpenFrameworks."
+last_modified_at:  2020-03-17 9:21:20 +0200
+related: false
 ---
 
 When I worked for [Laras](http://laras.be), I had the opportunity for my sonification project to model and code my own granular synthesiser.
@@ -19,7 +20,7 @@ When I worked for [Laras](http://laras.be), I had the opportunity for my sonific
 We first have to load a wave form in order to pick some samples to create our grains. Those grains are randomly selected within a window (subset) of the whole waveform as you can see on the figure 1. Having a window can be convenient if you want to select only certain parts of the waveform and move this window to modify the generated grains.
 
 <p align="center">
-<img src="/assets/img/sample_selection.png" alt="Grain selection"/>
+<img src="/assets/images/sample_selection.png" alt="Grain selection"/>
 </p>
 <p align="center">
 Figure 1: Sample selection
@@ -102,7 +103,7 @@ samples Grain::getSample(){
     return current_sample;
 ```
 <p align="center">
-<img src="/assets/img/grain_play.png" alt="Grains player"/>
+<img src="/assets/images/grain_play.png" alt="Grains player"/>
 </p>
 <p align="center">
 Figure 2: Grains player
