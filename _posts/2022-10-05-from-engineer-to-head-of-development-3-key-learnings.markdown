@@ -8,9 +8,8 @@ tagline: "Sharing 3 key learning from my 5 year experience as an engineer in a g
 img: "/assets/images/from-soft-en-hod.jpg"
 last_modified_at: 2022-10-05 10:05:20 +0200
 related: false
-published: false
+published: true
 ---
-
 
 When I started my journey as a software engineer in my last company, I had no idea that I would end up in a team leading/engineer manager role. Rather frequent within fast-growing companies, where founding engineers evolve to management role quickly without real preparation (that's where the fun is, right?). It is definitively challenging to be promoted from a building role (i.e. where you are in charge to discuss and deliver a scope) to a role where you need to commit on deadlines where scope, feasibility and timing are of utmost importance and not totally under your direct control. 
 
@@ -75,19 +74,52 @@ The logical reaction of the development team should be the following: next time,
 
 This stage also coincides with a refocusing of the role on tackling the technical debt while the CTO plays the cross team alignment role and sets the vision. Practically, you focus on a specific area and delegate most of the codebase to other technical lead. You start to lose direct control on implementations but most of the time you keep the global picture.
 
-## Key learnings
+## What are the biggest differences between those two phases?
+
+### You lose control on the implementation itself.
+
+The majority the implicit you were able to figure out while you were developing has now to be thought before the development and delegated to the team. If you have struggles to delegate, this is the time you have the impression the team will crash into the wall.
+
+In the learning curve of the team, you need to reduce the iteration cycle focussing on solving customer's issues instead of delivering features. Some companies measure velocity of the tech team with the number of feature delivered to the customers. However, they should measure the velocity as the number of problems solved. 
+
+### You start to set goals with the team and every team member
+
+At the team level, set problems to solve, the pains we want to relief. Let the team figure out how they will solve the problems. Moreover, they need to feel that their actions are getting their (working) life better so, make it tangible. It's your role to remember where the team is coming from and where it stands now and where it will eventually go. 
+
+At team member level: you need to understand what are the personnal goals of every team member, where they want to evolve, what are the skills they want to improve. 
+
+
+## Personnal key learnings
+
+### Feedbacks
+
+In a high pace environment, you can forget about the importance of the team giving and receiving feedbacks from peers. Your role is to set a work environment that allows people to provide feedbacks and failures. Set up regular retrospectives and encourage team members to express their feedback to others. 
+
+Not receiving loads of feedbacks in the retrospective? Some might be more comfortable to share it in writting instead of orally. We manage that by having 2 steps retrospectives where anyone was able to prepare and send feedbacks before the meeting. 
+
+Your role is to help people to make their feedback understood by others and make sure feedbacks are taken into account.
 
 ### Setting standards and governance rules early ease onboarding of new teammates
-Loads of frustration of team members comes from poorly defined code practices or worse, multiple code practices in one codebase. Early on, make it clear on what are the values of the team, how we operate things and what are the standard rules of coding.
 
-### At early stage an easy solution that needs to be rebuilt is better that a complex one
+Governance rules: new comers need to know how they will operate in the team and how the team operates with the rest of the company. This prevents situations where newcomers are lost because they don't know where they can seek information.
+
+Work standards: lots of frustration of team members comes from poorly defined code practices or worse, multiple code practices in one codebase. Early on, make it clear on what are the values of the team, how we operate things and what are the standard rules of coding. For instance, we reduced a lot of unclearities and frustrations through [ADR's](https://github.com/joelparkerhenderson/architecture-decision-record#what-is-an-architecture-decision-record) to create visibility around practices.
+
+<!-- ### At early stage an easy solution that needs to be rebuilt is better that a complex one
 Don't build a solution for scaling at the first stage of your company. When the company is in growth mode significant time is wasted in processes in general (e.g. can be in the IT solution or anywhere else). You may want to prematurely optimize your code and performance but most of the time you can’t predict the bottlenecks before actually facing them. If your sales are not growing fast, you don't need to care too much. At the beginning, the first metrics should be how easy you can add and remove features from the codebase. Onboarding time should be less than a few days to be able to add a small feature and a few weeks to really find your way in the codebase. Also don't be too creative for your first architecture and use (ideally a standard) one and stick to it. New joiners will thank you and it will reduce the amount the questions.
 
 <div class="banner">
 Make it work, make it right and then make it fast. 
-</div>
+</div> -->
 
 
 ### Having a high performing team requires time
 
-This is one of the most complex piece of learning to apply. Having a high performing team requires time. You can't really control how quickly the company evolves but hiring good team members is a must and they need time to work well and fast together. Team members need to be happy and thrilled by the challenge. This requires soft skills such as patience, empathy and people management. Additionally, the team must have a clear vision and objectives so everybody feels the boat is going in the right direction.
+This is one of the most complex piece of learning to apply. Having a high performing team requires time. You can't really control how quickly the company evolves but hiring good team members is a must and they need time to work well and fast together. 
+
+Team members need to be happy and thrilled by the challenge. This requires soft skills such as patience, empathy and people management. Additionally, the team must have a clear vision and objectives so everybody feels the boat is going in the (hopefully) right direction.
+
+## You relate to some struggles in your company?
+
+You need some help to improves practices or ways of working? Shoot me a message on my socials, I will be delighted to seek new collaborations!
+

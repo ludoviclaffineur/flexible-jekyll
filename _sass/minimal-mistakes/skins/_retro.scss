@@ -19,8 +19,8 @@ $code-background-color: mix(#fff, $background-color, 20%) !default;
 $code-background-color-dark: mix(#000, $background-color, 10%) !default;
 $form-background-color: mix(#fff, $background-color, 15%) !default;
 $footer-background-color: #000000 !default;
-$link-color: mix(#000, $primary-color, 10%) !default;
-$link-color-hover: mix(#fff, $link-color, 25%) !default;
+$link-color: $primary-color !default;
+$link-color-hover: $primary-color !default;
 $link-color-visited: mix(#000, $link-color, 25%) !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: mix(#000, $text-color, 20%) !default;
@@ -117,9 +117,38 @@ mark{
 
 }
 
+h2.form-title,
+h2.main-page-tagline{
+  margin-top: 0.5em !important;
+  border-bottom: none !important;
+}
+
+.input-text{
+  background-color: #fff;
+  border: 1.5px solid #000000;
+  border-radius: 8px;
+  padding: 10px;
+}
+.center{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.contact-form{
+  background-color: #fff;
+  border: 1.5px solid #000000;
+  border-radius: 16px;
+  transition: $global-transition;
+  transform: translate(0px, -2px);
+  box-shadow: 2px 2px 0px #000000;
+  width: 70%;
+  max-width: 70%;
+  margin-top: 20px;
+}
 
 .archive__item-retro{
-  background-color: #fff;
+  background-color: mix(#fff, $primary-color, 94%) ;
   border: 1.5px solid #000000;
   border-radius: 16px;
   transition: $global-transition;
@@ -195,4 +224,80 @@ div.highlight{
   .author__avatar img{
     border: none !important;
   }
+}
+
+::-moz-selection {
+  color: #fff !important;
+  background: $primary-color !important;
+}
+
+::selection {
+  color: #fff !important;
+  background: $primary-color !important;
+}
+
+.split-pane{
+  display: flex;
+  align-items: center;
+  flex-wrap:  wrap ;
+}
+
+.split-50{
+  width: 50%;
+  min-width: 500px;
+}
+
+.retro-button{
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+  
+  background: $primary-color;
+  border: 1.5px solid #000000;
+  border-radius: 10px;
+  transition: $global-transition;
+  &:hover{
+    box-shadow: 2px 2px 0px #000000;
+    cursor: pointer;
+    transform: translate3d(-2px, -2px, 0);
+    outline: none;
+  }
+  // &:enabled:hover{
+  //   transform: translate3d(0, 2px, 0);
+  //   box-shadow: none;
+  //   cursor: pointer;
+  // }
+  &:enabled:active {
+    transform: translate3d(0, 2px, 0);
+    box-shadow: none;
+    cursor: pointer;
+  }
+}
+
+
+/*button need to pop out the screen when hoover*/
+/* .button-primary:enabled:focus*/
+.button-primary:enabled:hover {
+  box-shadow: 2px 2px 0px #000000;
+  cursor: pointer;
+  transform: translate3d(0, -2px, 0);
+  outline: none;
+}
+
+.button-primary:enabled:active {
+  transform: translate3d(0, 2px, 0);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.button-primary:disabled{
+  background: #D1D1D1;
+  border: 1px solid #8D8D8D;
+  border-radius: 10px;
+  color: #8D8D8D;
+}
+
+.main-page-title{
+  font-size: 80px !important;
 }
