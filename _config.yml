@@ -107,7 +107,7 @@ author:
   name             : "Ludovic Laffineur"
   avatar           : assets/images/bio-photo.png
   bio              : "Tech builder — hobbyist composer"
-  location         : "Bruxelles"
+  location         : "Brussels - Remote"
   email            :
   links:
     - label: "Email"
@@ -134,13 +134,13 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/ludolaffineur"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/ludoviclaffineur"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:

@@ -1,7 +1,13 @@
+@import "minimal-mistakes/vendor/breakpoint/breakpoint";
 /* ==========================================================================
    Sunrise skin
    ========================================================================== */
-
+$small: 600px !default;
+$medium: 768px !default;
+$medium-wide: 900px !default;
+$large: 1024px !default;
+$x-large: 1280px !default;
+$max-width: $x-large !default;
 /* Colors */
 $dark-gray: #0e2431 !default;
 $background-color: #F0FDF5 !default;
@@ -55,6 +61,7 @@ $global-transition: all 0.2s ease-in-out !default;
 footer .social-icons i,
 footer .social-icons .svg-inline--fa{
   color: white !important;
+  text-align: center ;
 }
 
 
@@ -63,7 +70,7 @@ footer .social-icons .svg-inline--fa{
   p,
   li,
   dl {
-    font-size: 0.7em !important;
+    font-size: 16px !important;
   }
   
 }
@@ -174,5 +181,18 @@ div.highlight{
 
   &:visited {
     color: $text-color;
+  }
+}
+
+.sidebar {
+  
+
+  @include breakpoint($large) {
+    opacity: 1 !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+  .author__avatar img{
+    border: none !important;
   }
 }
