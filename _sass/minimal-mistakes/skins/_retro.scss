@@ -142,9 +142,12 @@ h2.main-page-tagline{
   transition: $global-transition;
   transform: translate(0px, -2px);
   box-shadow: 2px 2px 0px #000000;
-  width: 70%;
   max-width: 70%;
+  min-width: 40%;
   margin-top: 20px;
+  @include breakpoint(max-width $small) {
+    max-width: 100%;
+  }
 }
 
 .archive__item-retro{
@@ -244,14 +247,18 @@ div.highlight{
 
 .split-50{
   width: 50%;
-  min-width: 500px;
+  min-width: 250px;
+  @include breakpoint(max-width $small) {
+    width: 100%;
+  }
 }
 
 .retro-button{
   position: relative;
   box-sizing: border-box;
-  width: 200px;
+  width: 70%;
   height: 50px;
+  min-width: 80%;
   
   background: $primary-color;
   border: 1.5px solid #000000;
