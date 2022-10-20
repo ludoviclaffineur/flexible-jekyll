@@ -29,6 +29,8 @@ $light-green: #F0FDF5;
 $transparent-black: rgba(0, 0, 0, 0.3);
 /* notices */
 $notice-background-mix: 100% !default;
+$intro-transition: intro 0.3s both !default;
+
 
 /* sunrise syntax highlighting (base16) */
 $base00: #1d1f21 !default;
@@ -115,6 +117,7 @@ mark{
   font-size: 0.7em;
   font-weight: 400 !important;
 
+
 }
 
 h2.form-title,
@@ -122,12 +125,20 @@ h2.main-page-tagline{
   margin-top: 0.5em !important;
   border-bottom: none !important;
 }
-
+h2.main-page-tagline{
+  font-weight: 400;
+  font-size: 16px;
+}
 .input-text{
   background-color: #fff;
   border: 1.5px solid #000000;
   border-radius: 8px;
-  padding: 10px;
+  padding: 12px;
+  font-size: 0.7em ;
+}
+.long-text{
+  min-height: 200px;
+  resize: none;
 }
 .center{
   display: flex;
@@ -135,6 +146,20 @@ h2.main-page-tagline{
   align-items: center;
   justify-content: center;
 }
+
+.right{
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+  justify-content: right;
+  @include breakpoint(max-width $small) {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 .contact-form{
   background-color: #fff;
   border: 1.5px solid #000000;
@@ -243,6 +268,19 @@ div.highlight{
   display: flex;
   align-items: center;
   flex-wrap:  wrap ;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  -webkit-animation: $intro-transition;
+  animation: $intro-transition;
+  max-width: 100%;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+
+  @include breakpoint($x-large) {
+    max-width: $max-width;
+  }
 }
 
 .split-50{
@@ -259,6 +297,7 @@ div.highlight{
   width: 70%;
   height: 50px;
   min-width: 80%;
+  margin-top: 15px;
   
   background: $primary-color;
   border: 1.5px solid #000000;
@@ -306,5 +345,42 @@ div.highlight{
 }
 
 .main-page-title{
-  font-size: 80px !important;
+  font-size: 4em !important;
+  font-family: $montserrat !important;
+
 }
+
+.black-plane{
+  margin-bottom: 2em;
+  margin-top: 2em;
+  background-color: #000;
+  padding: 5em;
+  width: 100%;
+}
+
+.text-white{
+  color: white;
+}
+
+.green-dot-rounded{
+    /* dashed border */
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%233BD77CFF' stroke-width='4' stroke-dasharray='13' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+    border-radius: 16px;
+  }
+
+// #main {
+//   @include clearfix;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding-left: 1em;
+//   padding-right: 1em;
+//   -webkit-animation: $intro-transition;
+//   animation: $intro-transition;
+//   max-width: 100%;
+//   -webkit-animation-delay: 0.15s;
+//   animation-delay: 0.15s;
+
+//   @include breakpoint($x-large) {
+//     max-width: $max-width;
+//   }
+// }
