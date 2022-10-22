@@ -425,3 +425,27 @@ div.highlight{
   width: 3em;
   margin: 0.4em;
 }
+
+.tooltip-container{
+  display: inline;
+}
+
+.tooltip-container .tooltiptext {
+  visibility: hidden;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 0.5em;
+  border-radius: 6px;
+  padding: 5px 5px;
+  /* Position the tooltip */
+  position: absolute;
+  // left: 5px;
+
+  border: 1px solid #fff;
+  z-index: 1;
+}
+
+.tooltip-container:hover .tooltiptext {
+  visibility: visible;
+}
