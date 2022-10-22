@@ -14,6 +14,7 @@ $background-color: #F0FDF5 !default;
 $text-color: #000 !default;
 $muted-text-color: $dark-gray !default;
 $primary-color: #3BD77C !default;
+$secondary-color:#BFFCFC;
 $border-color: mix(#000, $background-color, 20%) !default;
 $code-background-color: mix(#fff, $background-color, 20%) !default;
 $code-background-color-dark: mix(#000, $background-color, 10%) !default;
@@ -145,6 +146,16 @@ h2.main-page-tagline{
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
+}
+
+.flex-start{
+  display: flex;
+  align-items: flex-start;
 }
 
 .right{
@@ -280,9 +291,9 @@ div.highlight{
 }
 .split-pane{
   display: flex;
-  align-items: center;
   flex-wrap:  wrap ;
 }
+
 
 
 
@@ -311,6 +322,7 @@ div.highlight{
   width: 70%;
   height: 50px;
   min-width: 80%;
+  color:#000;
   margin-top: 15px;
   
   background: $primary-color;
