@@ -305,6 +305,11 @@ div.highlight{
   }
 }
 
+.justify-around{
+  justify-content: space-evenly;
+}
+
+
 .split-33{
   max-width: 25%;
   margin-left: 2%;
@@ -316,15 +321,29 @@ div.highlight{
   }
 }
 
+.split-center{
+  max-width: 40%;
+  margin-left: 2%;
+  margin-right: 2%;
+  // min-width: 250px;
+  @include breakpoint(max-width $small) {
+    width: 100%;
+    min-width: 256px;
+  }
+}
+a.retro-button,
 .retro-button{
+
   position: relative;
   box-sizing: border-box;
   width: 70%;
   height: 50px;
-  min-width: 80%;
   color:#000;
+  text-decoration: none;
   margin-top: 15px;
   
+  margin-left: auto;
+  margin-right: auto;
   background: $primary-color;
   border: 1.5px solid #000000;
   border-radius: 10px;
@@ -334,7 +353,14 @@ div.highlight{
     cursor: pointer;
     transform: translate3d(-2px, -2px, 0);
     outline: none;
+    color: #000;
   }
+  &:visited{
+    color: #000;
+  }
+
+
+  max-width: 290px;
   // &:enabled:hover{
   //   transform: translate3d(0, 2px, 0);
   //   box-shadow: none;
@@ -381,7 +407,6 @@ div.highlight{
 }
 
 .black-plane{
-  margin-bottom: 2em;
   margin-top: 2em;
   background-color: #000;
   padding: 3em;
@@ -392,6 +417,19 @@ div.highlight{
   color: white;
 }
 
+.white-plane{
+  background-color: #fff;
+  padding: 3em;
+  width: 100%;
+}
+
+.transparent-plane{
+  padding: 3em;
+  width: 100%;
+}
+.text-black{
+  color: #000;
+}
 .green-dot-rounded{
     /* dashed border */
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%233BD77CFF' stroke-width='4' stroke-dasharray='13' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
@@ -401,6 +439,7 @@ div.highlight{
       margin-top: 0em !important;
       margin-bottom: 0em !important;
       font-family: $montserrat !important;
+      font-size: 2em !important;
     }
     h3{
       margin-top: 1em;
@@ -460,4 +499,49 @@ div.highlight{
 
 .tooltip-container:hover .tooltiptext {
   visibility: visible;
+}
+
+.main-page-h2{
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+  font-family: $montserrat !important;
+  font-size: 2em !important;
+}
+
+.p-main-page{
+  margin-top: 0em;
+  margin-bottom: 0.9em;
+  font-size: 0.8em ;
+}
+
+.service-tile{
+  margin: auto;
+  // background-color: $light-green;
+  background-color: white;
+  border: 1.5px solid #000000;
+  border-radius: 16px;
+  transition: $global-transition;
+  &:hover{
+    transform: translate(0px, -2px);
+    box-shadow: 2px 2px 0px #000000;
+  }
+  max-width: 80%;
+  min-width: 40%;
+  margin-top: 2em;
+  @include breakpoint(max-width $small) {
+    max-width: 100%;
+  }
+  
+  padding: 15px;
+  h3{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    font-family: $montserrat !important;
+    font-weight: 800;
+  }
+}
+
+.page__footer{
+  margin-top: 0px !important;
 }
