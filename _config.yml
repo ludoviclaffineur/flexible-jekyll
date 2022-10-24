@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Ludovic Laffineur"
   avatar           : assets/images/bio-photo.png
-  bio              : "Tech builder — hobbyist composer"
+  bio              : "Tech lead — Generalist Software Engineer"
   location         : "Brussels - Remote"
   email            :
   links:
@@ -127,6 +127,9 @@ author:
       url: "https://github.com/ludoviclaffineur"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
+    - label: "LinkedIn"
+      # icon: "fab fa-fw fa-linkedin-square"
+      url: "https://www.linkedin.com/in/llaffineur/"
       # url: "https://instagram.com/"
 
 # Site Footer
@@ -135,9 +138,9 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/ludolaffineur"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+    - label: "LinkedIn"
+      # icon: "fab fa-fw fa-linkedin-square"
+      url: "https://www.linkedin.com/in/llaffineur/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ludoviclaffineur"

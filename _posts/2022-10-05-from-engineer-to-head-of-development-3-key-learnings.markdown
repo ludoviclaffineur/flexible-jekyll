@@ -89,7 +89,7 @@ At the team level, set problems to solve, the pains we want to relief. Let the t
 At team member level: you need to understand what are the personnal goals of every team member, where they want to evolve, what are the skills they want to improve. 
 
 
-## Personnal key learnings
+## Personal key learnings
 
 ### Feedbacks
 

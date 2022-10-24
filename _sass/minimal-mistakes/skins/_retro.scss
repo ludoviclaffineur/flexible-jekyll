@@ -181,9 +181,26 @@ h2.main-page-tagline{
   max-width: 70%;
   min-width: 40%;
   margin-top: 2em;
+  margin-bottom: 2em;
   @include breakpoint(max-width $small) {
     max-width: 100%;
   }
+}
+
+.contact-form-about{
+  margin: auto;
+  background-color: transparent;
+  border-radius: 16px;
+  transition: $global-transition;
+  transform: translate(0px, -2px);
+  box-shadow: 2px 2px 0px #000000;
+  max-width: 40%;
+  min-width: 40%;
+  margin-top: 2em;
+  @include breakpoint(max-width $small) {
+    max-width: 100%;
+  }
+  text-align: center;
 }
 
 .archive__item-retro{
@@ -407,7 +424,6 @@ a.retro-button,
 }
 
 .black-plane{
-  margin-top: 2em;
   background-color: #000;
   padding: 3em;
   width: 100%;
@@ -544,4 +560,17 @@ a.retro-button,
 
 .page__footer{
   margin-top: 0px !important;
+}
+
+.timeline-img{
+  max-height: 400px;
+  margin: 40px;
+}
+
+.background-pink-odoo{
+  background-color: #FFE8F9;
+}
+
+.background-orange-skipr{
+  background-color: #FFE1DF;
 }
