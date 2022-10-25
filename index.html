@@ -11,7 +11,8 @@ date: 2022-10-17T03:02:20+00:00
             turn complex business problems into technical solutions.</h2>
     </div>
     <div class="split-50 right">
-        <form id="contact_form" class="contact-form" action="https://getform.io/f/0b896fab-258e-4503-a98a-d61551ca30c1" method="POST">
+        <form id="contact_form" class="contact-form" action="https://getform.io/f/0b896fab-258e-4503-a98a-d61551ca30c1"
+            method="POST">
             <h2 class="form-title">Wanna work together?</h2>
             <p>
                 <input required=true name="lastname" type="text" class="input-text" placeholder="What's your name?"
@@ -105,10 +106,10 @@ date: 2022-10-17T03:02:20+00:00
                 <div class="service-tile">
                     <h3 class="serive-tile-h3">Turning ideas into solutions</h3>
                     <p class="p-main-page">Implementation projects:
-                        <ul class="p-main-page">
-                            <li>You want to kick off a project?</li>
-                            <li>You need some extra power for your existing project?</li>
-                        </ul>
+                    <ul class="p-main-page">
+                        <li>You want to kick off a project?</li>
+                        <li>You need some extra power for your existing project?</li>
+                    </ul>
                 </div>
             </div>
             <div class="split-50 split-center">
@@ -132,8 +133,49 @@ date: 2022-10-17T03:02:20+00:00
                 </div>
             </div>
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a class="retro-button center split-center" href="#contact_form">Let's talk!</a>
     </div>
 </div>
+
+<!-- 
+<div class="background-orange-skipr">
+    <div class="container pane-padding">
+        <h2 class="main-page-h2">Latest Posts</h2>
+        
+        {% assign posts = site.posts %}
+        {% assign entries_layout = page.entries_layout | default: 'list' %}
+        <div class="split-pane">
+            {% for post in posts limit:2 %}
+            {% if post.id %}
+        {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+        {% else %}
+        {% assign title = post.title %}
+        {% endif %}
+            <div class="split-50">
+                <div class="service-tile retro-tile-portrait">
+                    <img class="post-thumbnail-portrait"
+                        src="{{'' | prepend: site.baseurl | append : post.header.overlay_image}}"></img>
+                    <h3 class="serive-tile-h3" itemprop="headline">
+                        {% if post.link %}
+                        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}"
+                            rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span
+                                class="sr-only">Permalink</span></a>
+                        {% else %}
+                        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+                        {% endif %}
+                    </h2>
+                    {% include page__meta.html type=include.type %}
+                    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt |
+                        markdownify | strip_html | truncate: 120 }}</p>{% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <p class="p-main-page right"><a href="/blog/">All posts —> </a></p>
+
+    </div>
+
+
+</div> -->
