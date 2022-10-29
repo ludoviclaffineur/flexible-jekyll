@@ -4,7 +4,7 @@ header:
   overlay_image: /assets/images/from-soft-en-hod.jpg
   og_image: /assets/images/from-soft-en-hod.jpg
   caption: "Photo credit: [**DALL·E 2**](https://openai.com/dall-e-2/)"
-tagline: "Sharing 3 key learning from my 5 year experience as an engineer in a growing company"
+tagline: "Sharing 3 key learnings from my 5 years experience as an engineer in a growing company"
 img: "/assets/images/from-soft-en-hod.jpg"
 last_modified_at: 2022-10-05 10:05:20 +0200
 related: false
@@ -63,7 +63,7 @@ The company is getting more funds to accelerate the development so, good news, t
 
 <mark>Your role starts to shift from solving problems towards creating stability</mark> through process, common understanding and standards definition. You are not anymore in a very small team. You have team members with different experiences, great assets but this can also lead to frustrations and delivery inconsistencies. Focus is then on setting standard ways of working to avoid lengthy and unproductive architecture decisions for every pull request. By having these clear rules in place, every new joiner will hit the ground faster. 
 
-At this stage you start to understand that your biggest contribution to the team is not producing code anymore, you have a team for that now but rather your knowledge on the business, software and the lessons learnt from past implementations, you now have a global vision. You start asking yourself more and more: <mark>What did we forget to consider about this feature that might fire back in a later stage of development?</mark>
+At this stage you start to understand that your biggest contribution to the team is not producing code anymore, you have a team for that now but rather your knowledge on the business, software and the lessons learnt from past implementations, you now have a global vision. You start asking yourself more and more: <mark>What did we forget to consider about this feature that might backfire in a later stage of development?</mark>
 
 On a regular basis, you find gaps in the way a feature is being implemented and you communicate your findings proactively to the team and product managers. You seek advice on how we should deal with this new information. Side story: the team starts to know that if you unexpectedly join a meeting , it's probably to bring bad news, meaning that something popped out that we did not think about earlier. It can entirely be linked to the development part (e.g. adding some missing security layer) or, on the contrary, linked to the experience that is not directly related to development: (e.g. feature to send emails but are the templates well ready and properly translated?). As a general rule, when an experience is not well covered, you have 3 options:
 - drop that part and manage user's expectations, 
