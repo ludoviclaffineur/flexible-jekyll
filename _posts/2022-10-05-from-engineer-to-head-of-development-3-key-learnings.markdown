@@ -6,7 +6,7 @@ header:
   caption: "Photo credit: [**DALL·E 2**](https://openai.com/dall-e-2/)"
 tagline: "Sharing 3 key learnings from my 5 years experience as an engineer in a growing company"
 img: "/assets/images/from-soft-en-hod.jpg"
-last_modified_at: 2022-10-05 10:05:20 +0200
+last_modified_at: 2022-10-28 10:05:20 +0200
 related: false
 published: true
 ---
