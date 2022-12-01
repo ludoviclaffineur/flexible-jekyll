@@ -6,7 +6,7 @@ header:
   caption: "Photo credit: [**IT Crowd**](https://www.youtube.com/watch?v=1EBfxjSFAxQ)"
 tagline: "Why your team is not taking good decisions?"
 img: "/assets/images/context-fire.png"
-last_modified_at: 2022-10-29 10:05:20 +0200
+last_modified_at: 2022-12-01 10:05:20 +0200
 related: false
 published: true
 ---
