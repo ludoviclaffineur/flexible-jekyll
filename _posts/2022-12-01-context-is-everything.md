@@ -77,5 +77,5 @@ As this generalist tech lead should have a broader view on the different systems
  - Help the team generate a list of steps to confirm the core cause.
  - Assist the team in identifying any risks associated with the solution, such as delays, data integrity, and breaking changes.
 
-In conclusion, effective decision-making in teams requires a thorough understanding of the problem and the customer's needs. By fostering collaboration and communication, and aligning on a clear vision, we can avoid the pitfalls of the "Chinese whispers" game and make better decisions that deliver real value to our customers.
+In conclusion, poor decision making often stems from a lack of context and understanding of the issue at hand. This can happen when information is interpreted and transferred from one person to another, leading to a diluted understanding of the problem. In order to avoid this, it's important for teams to have a clear understanding of the customer's needs and for all team members to be involved in the decision making process from the beginning. This will help ensure that decisions are made with the customer's needs in mind and that the final solution addresses the initial problem. By taking these steps, teams can avoid making decisions in a vacuum and ensure that they are making the right choices. 💡
 
