@@ -77,7 +77,5 @@ As this generalist tech lead should have a broader view on the different systems
  - Help the team generate a list of steps to confirm the core cause.
  - Assist the team in identifying any risks associated with the solution, such as delays, data integrity, and breaking changes.
 
-
-
-
+In conclusion, effective decision-making in teams requires a thorough understanding of the problem and the customer's needs. By fostering collaboration and communication, and aligning on a clear vision, we can avoid the pitfalls of the "Chinese whispers" game and make better decisions that deliver real value to our customers.
 
